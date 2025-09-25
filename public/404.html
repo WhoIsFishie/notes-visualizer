@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/notes-visualizer/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes Visualizer</title>
+    <script>
+      // Redirect to the main app for client-side routing
+      const path = window.location.pathname;
+      if (path && path !== '/' && !path.includes('.')) {
+        const base = '/notes-visualizer/';
+        const search = window.location.search || '';
+        const hash = window.location.hash || '';
+        window.location.replace(base + search + hash);
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+  </body>
+</html>
